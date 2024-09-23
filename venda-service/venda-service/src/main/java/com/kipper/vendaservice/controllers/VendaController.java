@@ -14,7 +14,7 @@ public class VendaController {
 
     @PostMapping
     public ResponseEntity<Void> realizarVenda(@RequestBody String idProduto) {
-        kafkaTemplate.send("estoque-topic", idProduto);
+        kafkaTemplate.send("douglas", idProduto);
 
         return ResponseEntity.ok().build();
     }
